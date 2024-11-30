@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+
     <title>Mundo Invertido</title>
+
 </head>
-<body>
-    <header>
+<body class="light-theme" aria-label="O site está utilizando o tema light">
+    <header aria-label="Cabeçalho da página.">
         <audio id="music">
-            <source src="assets/musics/normal-world.mpeg">
+            <source src="assets/musics/normal-world.mpeg" aria-details="Audio do site">
         </audio>
+        <div class="header-content">
+            <img class="invert-element" src="assets/images/banner/logo.svg" alt="Imagem principal Mundo Invertido. Semana Frontend DIO." />
+            <p class="invert-element" role="text">
+              Uma jornada para quem não tem medo do desconhecido. O caminho para o
+              Mundo invertido é incerto, repleto de obstáculos e perigos. Porém, a
+              recompensa é grande: salvar Hawkings e o mundo todo das garras de
+              Vecna. Você está preparado? Então clique no botão abaixo para entrar
+              no Mundo Invertido!
+            </p>
+            <button id="switch-theme-button" onclick="switchTheme()">Inverter Mundos</button>
+          </div>
+    
+          <div id="top-characters" class="world-characters"></div>
     </header>
 
     <main>
@@ -35,7 +52,7 @@
                 src="http://www.youtube.com/embed/SJ9EFhQ3ANQ?controls=0" 
                 title="YouTube video player" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen></iframe>
             </div>
             <div class="section-texts">
@@ -58,23 +75,63 @@
                         <img src="assets/images/content/serie-image-01.png" alt="imagem do Vecna">
                     </li>
                     <li class="gallery-image invert-element">
-                        <img src="assets/images/content/serie-image-02.png" alt="imagem Ilustrativa do grupo">
+                        <img src="assets/images/content/serie-image-02.png" alt="imagem Ilustrativa dos amigos da Eleven">
                     </li>
                     <li class="gallery-image invert-element">
                         <img src="assets/images/content/serie-image-03.png" alt="imagem Eleven assustada">
                     </li>
                 </ul>
-            </div> 
-                
-            
-            
+            </div>          
         </section>
-        <section></section>
+
+
+        <section id="section-form" class="container">
+            <h2>O Clube Dungeons & Dragons</h2>
+            <p>
+              Para deter Vecna, os heróis de Stranger Things também precisam de
+              você. O Clube de D&D mais famoso de Hawkings está com vagas abertas
+              para sua próxima aventura. Se você é destemido, gosta de desafios e
+              não tem medo de rodar o D20, chegou a hora de se inscrever para fazer
+              parte da nova campanha.
+            </p>
+    
+            <div class="form-content">
+              <h3>Entre para o clube de D&D e tenha experiências de <span>outro mundo<span></span></h3>
+    
+              <div class="form-container">
+                <form>
+                  <label for="name">Nome Completo</label>
+                  <input type="text" name="name" id="txtName">
+              
+                  <label for="email">E-mail</label>
+                  <input type="email" name="email" id="txtEmail">
+              
+                  <label for="level">Level</label>
+                  <input type="text" name="level" id="txtLevel">
+              
+                  <label for="character">Personagem</label>
+                  <textarea name="character" cols="30" rows="10" id="txtCharacter"></textarea>
+                
+                  <button type="button" id="btnSubscribe">Me inscrever</button>
+                </form>
+                
+              </div>
+            </div>
+          </section>
         
     </main>
 
     <footer>
-
-    </footer>
+        <p>
+          Projeto construído para fins didáticos, com o objetivo de colocar em
+          prática os conhecimentos de HTML, CSS e JavaScript aprendidos na DIO._
+        </p>
+        <img src="assets/images/footer/logo.svg" alt="">
+      </footer>
+      
+      <script type="module" src="assets/js/main.js"></script>
+      <script>
+        
+      </script>
 </body>
 </html>
